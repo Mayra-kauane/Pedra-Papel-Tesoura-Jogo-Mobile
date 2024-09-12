@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int playerScore = 0;
   int computerScore = 0;
-  String message = "";
+  String message = "Inicie a jogada...";
   String computerMove = "";
   String playerMove = "";
 
@@ -90,6 +90,16 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+            Column(children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text('Jogada do Computador',
+                    style: TextStyle(
+                        color: const Color.fromARGB(255, 41, 17, 73),
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold)),
+              ),
+            ]),
             PlayComputer(computerMove: computerMove),
             ResultDisplay(message: message),
             ScoreBoard(playerScore: playerScore, computerScore: computerScore),
