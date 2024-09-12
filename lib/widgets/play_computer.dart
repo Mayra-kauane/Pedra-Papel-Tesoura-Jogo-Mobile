@@ -19,7 +19,7 @@ class PlayComputer extends StatelessWidget {
     return CircleAvatar(
       radius: 40,
       backgroundColor: Colors.white,
-      backgroundImage: NetworkImage(imageUrl),
+      backgroundImage: computerMove.isNotEmpty? NetworkImage(imageUrl):null
     );
   }
 }
